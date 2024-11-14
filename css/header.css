@@ -37,13 +37,14 @@
 
 .contenedor_contador{
     color: var(--colorRosa);
-    & h5{
-        font-size: 15px;
-    }
+}
 
-    & h1{
-        font-size: 45px;
-    }
+.contenedor_contador h5{
+    font-size: 15px;
+}
+
+.contenedor_contador h1{
+    font-size: 45px;
 }
 
 .linea {
