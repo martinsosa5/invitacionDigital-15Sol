@@ -15,6 +15,104 @@
     <link rel="shortcut icon" href="/img/peliculas-series/img-logo-favicon.png" type="image/x-icon">
 </head>
 <body>
+
+    <header>
+
+        <div class="home_img d-flex">
+            <img src="/img/001.jpeg" alt="img-principal">
+        </div>
+
+        <div class="header_text text-center mt-3">
+            <h2>- Mis XV -</h2>
+            <h1>Sol</h1>
+        </div>
+
+        <hr class="linea">
+        <div class="timer container contenedor_contador text-center d-flex justify-content-center align-items-center" id="countdown"> 
+            <div class="row align-items-center justify-content-center">
+                        <div class="col-3 text-center">
+                            <h1 id="days">00</h1>
+                            <h5>DÍAS</h5>
+                        </div>
+                        <div class="col-3 text-center">
+                            <h1 id="hours">00</h1>
+                            <h5>HORAS</h5>
+                        </div>
+                        <div class="col-3 text-center">
+                            <h1 id="minutes">00</h1>
+                            <h5>MINUTOS</h5>
+                        </div>
+                        <div class="col-3 text-center">
+                            <h1 id="seconds">00</h1>
+                            <h5>SEG</h5>
+                        </div>
+            </div>
+        </div>
+        <hr class="linea">
+
+        <!-- audio -->
+        <div class="contenedor_reproductor d-flex align-items-center justify-content-center py-3">
+            <audio id="audioPlayer" autoplay loop>
+                <source src="/audio/Aprender a quererte - Morat.m4a" type="audio/mp3">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+        <!-- Botón flotante para reproducir/pausar el audio -->
+        <button id="audioToggleButton" class="floating-button"><i class="fas fa-play"></i></button>
+         <!-- audio -->
+          
+    </header>
+
+    <!-- audio -->
+    <script>
+        document.getElementById("audioToggleButton").addEventListener("click", function () {
+        const audioPlayer = document.getElementById("audioPlayer");
+        const buttonIcon = this.querySelector("i");
+        
+        if (audioPlayer.paused) {
+            audioPlayer.play();
+            buttonIcon.classList.remove("fas", "fa-play");
+            buttonIcon.classList.add("fas", "fa-pause"); // Cambiar a ícono de pausa
+        } else {
+            audioPlayer.pause();
+            buttonIcon.classList.remove("fas", "fa-pause");
+            buttonIcon.classList.add("fas", "fa-play"); // Cambiar a ícono de play
+        }
+         });
+    </script>
+    <!-- Contador regresivo -->
+    <script>
+        // Fecha objetivo (15/12/2024 a las 00:00:00)
+        const targetDate = new Date("December 15, 2024 00:00:00").getTime();
     
+        // Función para actualizar el contador cada segundo
+        const countdownInterval = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+    
+            // Cálculos de días, horas, minutos y segundos
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+            // Mostrar el contador en cada elemento correspondiente
+            document.getElementById("days").textContent = days < 10 ? "0" + days : days;
+            document.getElementById("hours").textContent = hours < 10 ? "0" + hours : hours;
+            document.getElementById("minutes").textContent = minutes < 10 ? "0" + minutes : minutes;
+            document.getElementById("seconds").textContent = seconds < 10 ? "0" + seconds : seconds;
+    
+            // Detener el contador cuando llegue a la fecha objetivo
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById("countdown").innerHTML = "¡Evento en curso!";
+            }
+        }, 1000);
+    </script>
+    <!-- par inicializar AOS -->
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
