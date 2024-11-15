@@ -133,6 +133,11 @@
 .texto-sobre-imagen p{
     font-size: 18px;
 }
+
+.texto-sobre-imagen h3{
+    font-family: var(--tipografiaDancing-Script);
+    font-size: 30px;
+}
 /* ---------------------------------------------------- */
 
 
@@ -142,7 +147,22 @@
     .text-overlay {
         font-size: 35px;  /* Tamaño del texto */
     }
+
+    .texto-sobre-imagen h2{
+        font-size: 60px;
+    }
+    
+    .texto-sobre-imagen p{
+        font-size: 30px;
+    }
+    
+    .texto-sobre-imagen h3{
+        font-family: var(--tipografiaDancing-Script);
+        font-size: 45px;
+    }
 }
+
+
 /* Estilos para laptop */
 @media (min-width: 1280px) {
     .text-overlay {
@@ -151,6 +171,11 @@
 
     .contenedor-frase img{
         width: 80%;
+    }
+
+    .contenedor_regalo img{
+        height: 650px;
+
     }
 }
 
