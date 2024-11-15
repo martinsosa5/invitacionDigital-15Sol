@@ -34,14 +34,17 @@
 
 .text_titulo{
     color: var(--colorRosaBlanco);
-    font-family: var(--tipografiaMerriweather-Sans);
+}
 
+.contenedor-info p{
+    color: var(--colorRosaBlanco);
 }
 .contenedor_img{
     width: 100%;
     height: 250px;
     object-fit: cover;
     border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3); /* Sombra */
 }
 .boton-mapa{
     background-color: var(--colorRosaBlanco);
@@ -51,10 +54,6 @@
 .boton-mapa:hover{
     background-color: var(--colorGris);
     color: aliceblue;
-}
-
-.contenedor-info p{
-    color: rgb(71, 66, 66);
 }
 
 .lineaBlanca {
@@ -80,8 +79,14 @@
     object-fit: cover;
 }
 
-/* ---------------------------------------------------- */
+.contenedor_dresscode p{
+    color: var(--colorGris);
+}
 
+/* ---------------------------------------------------- */
+.contenedor_galeria h1{
+    color: var(--colorRosa);
+}
 /* GALERIA DE FOTOS */
 .galeria_fotos{
    /*  background-color: rgb(238, 238, 238); */
