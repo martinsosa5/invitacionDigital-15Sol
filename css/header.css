@@ -36,7 +36,7 @@
 }
 
 .contenedor_contador{
-    color: var(--colorRosa);
+    color: var(--colorRosa); 
 }
 
 .contenedor_contador h5{

@@ -7,7 +7,7 @@
     width: 100%;
     height: auto;
     object-fit: cover;
-    filter: brightness(40%);  /* Aplica un filtro de oscuridad a la imagen */
+    filter: brightness(70%);  /* Aplica un filtro de oscuridad a la imagen */
 }
 
 .text-overlay {
@@ -22,6 +22,41 @@
     padding: 10px;  /* Espaciado alrededor del texto */
     font-family: var(--tipografiaDancing-Script);
 }
+
+/* --------- SECCION DE DONDE Y CUANDO --------- */
+
+.contenedor_dondeycuando{
+    background-color: var(--colorRosa);
+}
+.contenedor_card img{
+    width: 100%;
+}
+
+.text_titulo{
+    color: var(--colorRosaBlanco);
+    font-family: var(--tipografiaMerriweather-Sans);
+
+}
+.contenedor_img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.boton-mapa{
+    background-color: var(--colorRosaBlanco);
+    color: var(--colorRosa);
+    font-family: var(--tipografiaMerriweather-Sans);
+}
+.boton-mapa:hover{
+    background-color: var(--colorGris);
+    color: aliceblue;
+}
+
+.contenedor-info p{
+    color: rgb(71, 66, 66);
+}
+/* ---------------------------------------------------- */
 
 
 
