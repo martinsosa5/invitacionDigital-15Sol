@@ -99,6 +99,41 @@
     
 /* ---------------------------------------------------- */
 
+/*---------- REGALO -------------- */
+
+.contenedor_regalo{
+    position: relative;
+    display: inline-block;
+}
+
+.contenedor_regalo img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    filter: brightness(70%);  /* Aplica un filtro de oscuridad a la imagen */
+}
+
+.texto-sobre-imagen {
+    text-align: right;
+    position: absolute;
+    top: 50%;                  /* Centra verticalmente el texto */
+    right: 0%;                /* Mueve el texto hacia la derecha */
+    transform: translateY(-50%); /* Centra el texto verticalmente */
+    color: white;              /* Cambia el color para que se vea sobre la imagen */
+    /* background-color: rgba(0, 0, 0, 0.5); */ /* Fondo semitransparente para mejor legibilidad */
+    padding: 20px;             /* Espacio alrededor del texto */
+    max-width: 100%;            /* Controla el ancho del texto en la imagen */
+}
+
+.texto-sobre-imagen h2{
+    font-size: 40px;
+    color: var(--colorRosaBlanco);
+}
+
+.texto-sobre-imagen p{
+    font-size: 18px;
+}
+/* ---------------------------------------------------- */
 
 
 /* MEDIAS QUERIES */
