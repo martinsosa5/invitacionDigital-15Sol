@@ -1,12 +1,13 @@
 .home_img {
     position: relative;
-    
+    display: inline-block;
 }
 
 .home_img img{
     width: 100%;
     height: auto;
     object-fit: cover;
+    display: block;
     z-index: 0;
 }
 
