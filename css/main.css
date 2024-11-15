@@ -16,7 +16,7 @@
     left: 0;
     width: 100%;  /* Hace que el texto ocupe todo el ancho de la imagen */
     color: white;  /* Color del texto */
-    font-size: 20px;  /* Tamaño del texto */
+    font-size: 25px;  /* Tamaño del texto */
     font-weight: bold;  /* Opcional: negrita */
     text-align: center;  /* Centra el texto horizontalmente */
     padding: 10px;  /* Espaciado alrededor del texto */
@@ -56,6 +56,47 @@
 .contenedor-info p{
     color: rgb(71, 66, 66);
 }
+
+.lineaBlanca {
+    border: 2px solid #ffffff; width: 80%; margin: 20px auto;
+}
+/* ---------------------------------------------------- */
+
+/* DRESS CODE */
+.card_dresscode{
+    background-color: var(--colorRosa);
+    width: 250px;      /* Ajusta el tamaño del círculo */
+    height: 250px;     /* Igual que el width para que sea un círculo */
+    border-radius: 50%;  /* Esto redondea las esquinas para hacer el círculo */
+    overflow: hidden;   /* Asegúrate de que la imagen no se salga del contenedor */
+}
+
+.contenedor_dresscode h1{
+    color: var(--colorRosa);
+}
+.card_dresscode img{
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* ---------------------------------------------------- */
+
+/* GALERIA DE FOTOS */
+.galeria_fotos{
+   /*  background-color: rgb(238, 238, 238); */
+    padding: 1.5rem;
+   /*  padding-top: 2rem; */
+    /* margin-top: 1.5rem; */
+    }
+    
+    .img{
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Sombra negra */
+    }
+    
 /* ---------------------------------------------------- */
 
 
