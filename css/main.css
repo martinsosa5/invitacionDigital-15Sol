@@ -1,3 +1,55 @@
+/* Estilos de la capa de superposición */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--colorRosaBlanco); /* Capa semitransparente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Se coloca en el frente */
+}
+
+/* Estilo del botón */
+#ingresarBtn {
+    padding: 15px 30px;
+    font-size: 18px;
+    color: var(--colorRosaBlanco);
+    background-color: var(--colorRosa);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contenedor_superposicion h1{
+    color: var(--colorRosa);
+    font-size: 40px;
+    font-family: var(--tipografiaMerriweather-Sans);
+    font-weight: bold;
+}
+
+.contenedor_superposicion h5{
+    color: var(--colorGris);
+}
+
+.circle_img{
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: solid 3px var(--colorRosa);
+    /* para darle un efecto a la foto (trabajamos con el desenfoque y el brillo)
+    cursor: pointer;
+    filter: blur(0.5px) brightness(85%);
+    transition: all 1s ease;
+    &:hover{
+        filter: blur(0) brightness(100%);
+    }
+        */
+}
+
 .contenedor-frase{
     position: relative;
     display: inline-block;

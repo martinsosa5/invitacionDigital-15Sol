@@ -20,6 +20,18 @@
 </head>
 <body>
 
+    <!-- Capa de superposición -->
+    <div id="overlay" class="d-flex flex-column text-center contenedor_superposicion">
+        <div class="circle_img text-center" data-aos="flip-right" data-aos-duration="2500">
+            <img src="/img/icono-inicio.jpeg" alt="icon-img" class="img-fluid rounded-circle mw-100" >
+        </div>
+        <h1 class="mt-3">MIS XV SOL</h1>
+        <h5>QUIERO QUE SEAS PARTE DE ESTE MOMENTO TAN IMPORTANTE PARA MÍ</h5>
+        <button class="mt-2" id="ingresarBtn">Ingresar</button>
+    </div>
+
+
+
     <header>
 
         <div class="home_img d-flex">
@@ -53,16 +65,17 @@
             </div>
         </div>
         <hr class="linea">
-
+        
+        
         <!-- audio -->
-       <!--  <div class="contenedor_reproductor d-flex align-items-center justify-content-center py-3">
-            <audio id="audioPlayer" autoplay loop>
-                <source src="/audio/Aprender a quererte - Morat.m4a" type="audio/mp3">
+        <div class="contenedor_reproductor d-flex align-items-center justify-content-center py-3">
+            <audio id="musica" autoplay loop>
+                <source src="/audio/Coldplay - Paradise.m4a" type="audio/mp3">
                 Tu navegador no soporta el elemento de audio.
             </audio>
-        </div> -->
+        </div>
         <!-- Botón flotante para reproducir/pausar el audio -->
-       <!--  <button id="audioToggleButton" class="floating-button"><i class="fas fa-play"></i></button> -->
+        <button id="audioToggleButton" class="floating-button"><i class="fas fa-pause"></i></button>
          <!-- audio -->
           
     </header>
@@ -71,7 +84,7 @@
 
         <div class="contenedor-frase d-flex justify-content-center">
             <img src="/img/003.jpeg" alt="img">
-            <div class="text-overlay">Toma esta fecha, este dia, este motivo... <br> Dale el sentido que quieras y veni. <br> 
+            <div class="text-overlay">Toma esta fecha, este día, este motivo... <br> Dale el sentido que quieras y veni. <br> 
             Quiero compartir contigo mi dicha, mi alegria, MIS XV años</div>
         </div>
         <div class="contenedor_dondeycuando mt-2">
@@ -81,10 +94,10 @@
                     <h2 class="text_titulo"><i class="fa-solid fa-church"></i> <br> CEREMONIA</h2>
                     <hr class="lineaBlanca">
                     <img class="contenedor_img" src="/img/iglesia.jpg" alt="iglesia">
-                    <p class="mt-2 fs-5"><b>Iglesia Parroquial Nuestra Señora de Rosario</b> <br>Domingo 15 de diciembre a las 20:30 hs 
+                    <p class="mt-2 fs-5"><b>Iglesia Parroquial Nuestra Señora del Rosario</b> <br>Domingo 15 de diciembre a las 20:30 hs 
                     </b></p>
                    
-                    <p>Rivadavia 320 - Monteros -Tucuman</p>
+                    <p>Rivadavia 320 - Monteros -Tucumán</p>
                     <a href="https://maps.app.goo.gl/bTuv81yeEQxU6xSo7?g_st=iw" class="boton-mapa btn mt-1"><i class="fa-solid fa-location-dot p-1"></i> COMO LLEGAR</a>
                 </section>
         
@@ -111,7 +124,7 @@
             <div class="card_dresscode justify-content-center align-items-center d-flex">
                 <img src="/img/DRESSCODE.png" alt="imagen">
             </div>
-            <p class="text-center m-1"><b>Elegante</b><br>Por favor no te pongas nada rosa.</p>
+            <p class="text-center m-1"><b>Elegante</b><br>* Por favor no te pongas nada rosa *</p>
         </div>
         <div class="container contenedor_galeria d-flex flex-column justify-content-center align-items-center">
             <hr class="linea">
@@ -179,9 +192,9 @@
             <hr class="linea">
             <h1 class="text-center"><i class="fa-solid fa-gift"></i> <br>Regalo</h1>
             <hr class="linea">
-            <h3>¡Lo mejor que podes darme es tu presencia! <br> Pero si querés regalrme algo, voy a estar mas que agradecida.</h3>
+            <h3>¡Lo mejor que podes darme es tu presencia! <br> Pero si quieres regalrme algo, voy a estar mas que agradecida.</h3>
             <p><br><b>MERCADO PAGO<br>Alias:</b> Solana2009 <br><b>CVU:</b> 0000003100031729305011 <br><b>Titular:</b> Solana Barrientos Safalle</p>
-            <p><b><i class="fa-solid fa-envelope"></i> SOBRE DE EFECTIVO</b><br>Tambien habrá un cofre en la entrada para que puedas depositarlo.</p>
+            <p><b><i class="fa-solid fa-envelope"></i> SOBRE DE EFECTIVO</b><br>También habrá un cofre en la entrada para que puedas depositarlo.</p>
         </div>
 
         <div class="banner_separador" data-aos="fade-left" data-aos-offset="40" data-aos-easing="ease-in-sine">
@@ -218,7 +231,7 @@
                 </p>
             </div>
             <div class="col-12">
-                <p class="m-0 text-white-50 text-center">&copy; Sosa Leandro Martin</p>
+                <p class="m-0 text-white-50 text-center">&copy; SLM</p>
             </div>
         </div>
       </footer>
@@ -231,11 +244,23 @@
 
 
 
+      <script>
+        document.getElementById("ingresarBtn").addEventListener("click", function() {
+            // Elimina la capa de superposición
+            const overlay = document.getElementById("overlay");
+            overlay.remove();
 
+            // Reproduce la música
+            const musica = document.getElementById("musica");
+            musica.play().catch((error) => {
+                console.error("No se pudo reproducir la música:", error);
+            });
+        });
+    </script>
     <!-- audio -->
     <script>
         document.getElementById("audioToggleButton").addEventListener("click", function () {
-        const audioPlayer = document.getElementById("audioPlayer");
+        const audioPlayer = document.getElementById("musica");
         const buttonIcon = this.querySelector("i");
         
         if (audioPlayer.paused) {
@@ -247,7 +272,10 @@
             buttonIcon.classList.remove("fas", "fa-pause");
             buttonIcon.classList.add("fas", "fa-play"); // Cambiar a ícono de play
         }
-         });
+         }
+        
+        
+        );
     </script>
     <!-- Contador regresivo -->
     <script>
