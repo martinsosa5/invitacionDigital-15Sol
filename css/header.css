@@ -51,7 +51,7 @@
     border: 1px solid #FF69B4; width: 80%; margin: 20px auto;
 }
 .contenedor_Botonflotante{
-    position: relative; /* Establece el contexto de posición */
+    position: absolute; /* Establece el contexto de posición */
 }
 .floating-button {
     position: fixed;
