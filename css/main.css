@@ -25,13 +25,14 @@
 
 .contenedor_superposicion h1{
     color: var(--colorRosa);
-    font-size: 40px;
+    font-size: 35px;
     font-family: var(--tipografiaMerriweather-Sans);
     font-weight: bold;
 }
 
 .contenedor_superposicion h5{
     color: var(--colorGris);
+    font-weight: 300;
 }
 
 .circle_img{
