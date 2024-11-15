@@ -51,12 +51,12 @@
     border: 1px solid #FF69B4; width: 80%; margin: 20px auto;
 }
 .contenedor_Botonflotante{
-    position: absolute; /* Establece el contexto de posición */
+    position: relative; /* Establece el contexto de posición */
 }
 .floating-button {
     position: fixed;
-    bottom: 10%; /* Ajusta este valor para mover el botón más arriba o más abajo */
-    right: 10%;  /* Ajusta este valor para acercarlo o alejarlo del borde derecho */
+    bottom: 20px; /* Ajusta este valor para mover el botón más arriba o más abajo */
+    right: 20px;  /* Ajusta este valor para acercarlo o alejarlo del borde derecho */
     background-color: var(--colorRosa);
     color: white;
     border: none;

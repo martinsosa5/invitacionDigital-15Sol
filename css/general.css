@@ -8,7 +8,8 @@
 body {
     background: var(--colorRosaBlanco);
 }
-
+/* puse esto por que en el navegador de google chrome tenia un problema y 
+la pagina no se vea completo el ancho */
 html, body {
     width: 100%;
     overflow-x: hidden; /* Evitar desplazamiento horizontal */
